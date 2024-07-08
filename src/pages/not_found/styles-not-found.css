@@ -8,11 +8,11 @@
 
 .error-404 {
   font-size: 5rem;
-  color: #f00;
+  color: rgb(255, 204, 204);
   margin-bottom: 1rem;
 }
 
 .message-not-found {
   font-size: 2rem;
-  color: #555;
+  color: #929292;
 }

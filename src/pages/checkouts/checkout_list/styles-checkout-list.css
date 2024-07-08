@@ -1,0 +1,48 @@
+.checkout-list {
+  background-color: #1a1a1a;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-list h2 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.checkout-list table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.checkout-list th,
+.checkout-list td {
+  padding: 0.8em;
+  text-align: left;
+  border-bottom: 1px solid #333;
+  color: white;
+}
+
+.checkout-list th {
+  background-color: #333;
+}
+
+.checkout-list td {
+  background-color: #242424;
+}
+
+.checkout-list td button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+  margin-right: 0.5em;
+}
+
+.checkout-list td button:hover {
+  background-color: #e63946;
+}

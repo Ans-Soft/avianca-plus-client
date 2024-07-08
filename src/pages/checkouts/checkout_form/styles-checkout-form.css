@@ -1,0 +1,46 @@
+.checkout-form {
+  background-color: #1a1a1a;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.checkout-form h2 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.checkout-form input[type="text"],
+.checkout-form input[type="date"] {
+  width: 100%;
+  padding: 0.8em;
+  margin-bottom: 1rem;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background-color: #333;
+  color: white;
+  font-size: 1em;
+}
+
+.checkout-form input[type="text"]::placeholder,
+.checkout-form input[type="date"]::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.checkout-form button {
+  margin-top: 1rem;
+  background-color: #646cff;
+  color: white;
+  border: none;
+  padding: 0.8em 1.2em;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.checkout-form button:hover {
+  background-color: #535bf2;
+}
+
