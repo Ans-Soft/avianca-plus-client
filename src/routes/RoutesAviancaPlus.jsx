@@ -1,7 +1,9 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "../pages/home/Home";
 import NotFound from "../pages/not_found/NotFound";
-import Booking from "../pages/booking/Booking";
+import Checkout from "../pages/checkouts/Checkout";
+import Flight from "../pages/flights/Flight";
+import Hotel from "../pages/hotels/Hotel";
 
 export default function RoutesAviancaPlus() {
   return (
@@ -13,8 +15,10 @@ export default function RoutesAviancaPlus() {
         {/* Route for handling unknown URLs */}
         <Route path="*" element={<NotFound />} />
 
-        {/* Route for the booking page */}
-        <Route path="/booking" element={<Booking />} />
+        {/* Route for the checkouts page */}
+        <Route path="/checkouts" element={<Checkout />} />
+        <Route path="/flights" element={<Flight />} />
+        <Route path="/hotels" element={<Hotel />} />
       </Routes>
     </BrowserRouter>
   )

@@ -1,10 +1,9 @@
-// api.js
-const baseURL = 'http://127.0.0.1:36479'; // Change this to your Flask service URL
+const baseURL = ' http://127.0.0.1:45001'; // Cambia esto por la URL de tu servicio Flask de vuelos
 
-// Function to create a booking
-export async function createBooking(data) {
+// Function to create a flight
+export async function createFlight(data) {
     try {
-        const response = await fetch(`${baseURL}/bookings`, {
+        const response = await fetch(`${baseURL}/api/v1/flight`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -13,10 +12,10 @@ export async function createBooking(data) {
         });
         const result = await response.json();
         if (response.ok) {
-            console.log('Booking created:', result);
+            console.log('Flight created:', result);
             return result;
         } else {
-            console.error('Error creating booking:', result);
+            console.error('Error creating flight:', result);
             throw new Error(result.error);
         }
     } catch (error) {
@@ -25,16 +24,16 @@ export async function createBooking(data) {
     }
 }
 
-// Function to get all bookings
-export async function getBookings() {
+// Function to get all flights
+export async function getFlights() {
     try {
-        const response = await fetch(`${baseURL}/bookings`);
+        const response = await fetch(`${baseURL}/api/v1/flight`);
         const result = await response.json();
         if (response.ok) {
-            console.log('Bookings:', result);
+            console.log('Flights:', result);
             return result;
         } else {
-            console.error('Error fetching bookings:', result);
+            console.error('Error fetching flights:', result);
             throw new Error(result.error);
         }
     } catch (error) {
@@ -43,16 +42,16 @@ export async function getBookings() {
     }
 }
 
-// Function to get a booking by ID
-export async function getBooking(id) {
+// Function to get a flight by ID
+export async function getFlight(id) {
     try {
-        const response = await fetch(`${baseURL}/bookings/${id}`);
+        const response = await fetch(`${baseURL}/api/v1/flight/${id}`);
         const result = await response.json();
         if (response.ok) {
-            console.log('Booking:', result);
+            console.log('Flight:', result);
             return result;
         } else {
-            console.error('Error fetching booking:', result);
+            console.error('Error fetching flight:', result);
             throw new Error(result.error);
         }
     } catch (error) {
@@ -61,10 +60,10 @@ export async function getBooking(id) {
     }
 }
 
-// Function to update a booking
-export async function updateBooking(id, data) {
+// Function to update a flight
+export async function updateFlight(id, data) {
     try {
-        const response = await fetch(`${baseURL}/bookings/${id}`, {
+        const response = await fetch(`${baseURL}/api/v1/flight/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -73,10 +72,10 @@ export async function updateBooking(id, data) {
         });
         const result = await response.json();
         if (response.ok) {
-            console.log('Booking updated:', result);
+            console.log('Flight updated:', result);
             return result;
         } else {
-            console.error('Error updating booking:', result);
+            console.error('Error updating flight:', result);
             throw new Error(result.error);
         }
     } catch (error) {
@@ -85,18 +84,21 @@ export async function updateBooking(id, data) {
     }
 }
 
-// Function to delete a booking
-export async function deleteBooking(id) {
+// Function to delete a flight
+export async function deleteFlight(id) {
     try {
-        const response = await fetch(`${baseURL}/bookings/${id}`, {
-            method: 'DELETE'
+        const response = await fetch(`${baseURL}/api/v1/flight/${id}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            }
         });
         const result = await response.json();
         if (response.ok) {
-            console.log('Booking deleted:', result);
+            console.log('Flight deleted:', result);
             return result;
         } else {
-            console.error('Error deleting booking:', result);
+            console.error('Error deleting flight:', result);
             throw new Error(result.error);
         }
     } catch (error) {
